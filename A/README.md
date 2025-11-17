@@ -39,20 +39,20 @@ Output:
 - Test 3: x=3, n=6 → sequence: 3, -3, 3, -3, 3, -3 → total = 0
 - Test 4: x=4, n=7 → sequence: 4, -4, 4, -4, 4, -4, 4 → total = 4
 
-## Implementation
+## Solution
 
-Language: **Python**
+The sequence alternates between x and -x. If n is even, they cancel out (result = 0). If n is odd, one x remains (result = x).
 
 ## How to Run
 
 ```bash
-python solution.py
+python3 solution.py < test_input.txt
 ```
 
-## File Structure
-
+Expected output:
 ```
-A/
-├── solution.py   # Main solution
-└── README.md     # This file
+0
+2
+0
+4
 ```

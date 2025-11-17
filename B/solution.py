@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Task B - CargoCraft Fleet
 Solution template
