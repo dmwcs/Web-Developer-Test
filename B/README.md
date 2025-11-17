@@ -43,25 +43,20 @@ Output:
   - Minimum crafts: 4 Type B (4×6=24)
 - **n=998244353998244352**: Large number case
 
-## Constraints
+## Solution
 
-- Time limit: 1 second
-- Memory limit: 256 MB
-
-## Implementation
-
-Language: **Python**
+Use Type B (6 units) for minimum crafts, Type A (4 units) for maximum crafts. Check if n is even and >= 4 (except n=2 is impossible).
 
 ## How to Run
 
 ```bash
-python solution.py
+python3 solution.py < test_input.txt
 ```
 
-## File Structure
-
+Expected output:
 ```
-B/
-├── solution.py   # Main solution
-└── README.md     # This file
+1 1
+-1
+4 6
+166374058999707392 249561088499561088
 ```
