@@ -9,9 +9,10 @@ export const VALID_USERS = [
 
 // Zod validation schema
 export const loginSchema = z.object({
-  email: z.string().email('Invalid email format'),
+  email: z.email('Invalid email format or not be empty'),
   password: z
     .string()
+    .min(1, 'Password is required')
     .min(8, 'Password must be at least 8 characters')
     .max(16, 'Password must be at most 16 characters')
     .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
