@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import LoginForm from '../components/LoginForm'
+import Welcome from '../components/Welcome'
 
 function LoginPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -15,19 +17,13 @@ function LoginPage() {
   }
 
   return (
-    <div>
+    <>
       {isLoggedIn ? (
-        <div>
-          <h1>Welcome, {currentUser}!</h1>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
+        <Welcome userEmail={currentUser} onLogout={handleLogout} />
       ) : (
-        <div>
-          <h1>Login</h1>
-          <p>Login form component will go here</p>
-        </div>
+        <LoginForm onLogin={handleLogin} />
       )}
-    </div>
+    </>
   )
 }
 
