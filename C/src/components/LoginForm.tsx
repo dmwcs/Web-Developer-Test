@@ -40,77 +40,85 @@ function LoginForm({ onLogin }: LoginFormProps) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Login
-        </h1>
-
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          {/* Email Field */}
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              {...register('email')}
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-            />
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-            )}
-          </div>
-
-          {/* Password Field */}
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              {...register('password')}
-              placeholder="Enter your password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-            />
-            {errors.password && (
-              <p className="mt-1 text-sm text-red-600">
-                {errors.password.message}
-              </p>
-            )}
-          </div>
-
-          {/* Custom error (email not exists or wrong password) */}
-          {customError && (
-            <div className="p-3 bg-red-50 border border-red-200 rounded-md">
-              <p className="text-sm text-red-600">{customError}</p>
-            </div>
-          )}
-
-          {/* Login Button */}
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
-          >
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
+      <div className="w-full max-w-md">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          {/* Title */}
+          <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
             Login
-          </button>
+          </h1>
 
-          {/* Forgot Password Link */}
-          <div className="text-center">
-            <a href="#" className="text-sm text-blue-600 hover:text-blue-800">
-              Forgot password?
-            </a>
-          </div>
-        </form>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            {/* Email Field */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                {...register('email')}
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+              />
+              {errors.email && (
+                <p className="mt-2 text-sm text-red-600">
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
+
+            {/* Password Field */}
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                {...register('password')}
+                placeholder="Enter your password"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+              />
+              {errors.password && (
+                <p className="mt-2 text-sm text-red-600">
+                  {errors.password.message}
+                </p>
+              )}
+            </div>
+
+            {/* Custom error */}
+            {customError && (
+              <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+                <p className="text-sm font-medium text-red-800">{customError}</p>
+              </div>
+            )}
+
+            {/* Login Button */}
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
+            >
+              Login
+            </button>
+
+            {/* Forgot Password */}
+            <div className="text-center pt-2">
+              <a
+                href="#"
+                className="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+              >
+                Forgot password?
+              </a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   )
