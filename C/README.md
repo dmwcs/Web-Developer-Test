@@ -45,44 +45,50 @@ When credentials are valid:
 - Use clean, readable code with comments
 - Neat and consistent styling
 
-## Implementation
+## Tech Stack
 
-Framework: **React + TypeScript + Vite**
+- **React 19** - Modern UI library with hooks
+- **TypeScript** - Type safety and better developer experience
+- **Vite** - Fast build tool and dev server
+- **React Hook Form** - Efficient form state management with minimal re-renders
+- **Zod** - TypeScript-first schema validation
+- **Tailwind CSS** - Utility-first CSS framework for rapid styling
+- **Vitest** - Fast unit testing framework
+
+### Why This Stack?
+
+- **React Hook Form + Zod**: Best practice for form validation in React, provides type-safe validation with great performance
+- **TypeScript**: Catches errors at compile time, improves code quality
+- **Tailwind CSS**: Clean, maintainable styling without writing custom CSS
+- **Vitest**: Fast tests with React Testing Library integration
 
 ## Setup
 
-Install dependencies:
-
 ```bash
+cd C
 npm install
 ```
 
 ## How to Run
 
+Development mode:
 ```bash
 npm run dev
 ```
 
-## File Structure
-
+Run tests:
+```bash
+npm test
 ```
-C/
-├── src/
-│   ├── main.ts           # Entry point
-│   ├── counter.ts        # Example code (to be replaced)
-│   ├── style.css         # Global styles
-│   └── typescript.svg    # Assets
-├── public/
-│   └── vite.svg
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.js
-└── README.md
+
+Build for production:
+```bash
+npm run build
 ```
 
 ## Sample Credentials
 
-Will be hardcoded in the application (example):
-- Email: test@example.com
-- Password: Test1234!
+Hardcoded valid users:
+- Email: `test@example.com` / Password: `Test1234!`
+- Email: `admin@example.com` / Password: `Admin123@`
+- Email: `user@demo.com` / Password: `User5678#`
